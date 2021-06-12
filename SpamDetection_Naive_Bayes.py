@@ -48,9 +48,3 @@ classifier.fit(counts, targets)
 
 joblib.dump(classifier, "SpamDetectModel")
 print('SpamDetectModel Created!')
-
-model= joblib.load('SpamDetectModel')
-examples = [input('Paste your email data')]
-example_counts = vectorizer.transform(examples)
-predictions = model.predict(example_counts)
-print(predictions)
